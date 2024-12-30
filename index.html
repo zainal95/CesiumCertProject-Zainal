@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="RICore/Widgets/widgets.css" rel="stylesheet">                 <!--     CSS for cesium map-->
+    <script src="RICore/Cesium.js"></script>                                 <!--     JS for cesium map-->
+    <script src="RICore/Compass/viewerCesiumNavigationMixin.js"></script>    <!--     Js for cesium compas (top left of screen)-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="#">
+
+</head>
+<body>
+    <div id="RIContainer"></div>
+
+    <button id="openModal" class="cesium-button" onclick="openModalAssetList()">Data Asset List</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span> 
+            <br>
+            <input type="text" id="searchField" placeholder="Search..." style="margin-bottom: 10px; width: 100%; padding: 8px;">
+
+            <div class="dataTableContainer">
+                <table id="dataTable" border="1">  
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Culvert Name</th>
+                            <th>Layer</th>
+                            <th>Path</th>
+                            <th>Coordinates</th>
+                            <th>Asset Condition</th>
+                            <th>Fly To</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically added here -->
+                    </tbody>
+                </table>
+
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
+ 
+
+<script src="js/onLoad.js"></script> 
+
+
+ 
